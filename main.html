@@ -2,10 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legislature AI</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <header>
+        <h1>Legislature AI</h1>
+        <p>Simplifying complex legal text into easy-to-understand language</p>
+    </header>
 
+    <main>
+        <section class="search-section">
+            <h2>Search Legislation</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for bills or legislation...">
+                <button id="searchButton">Search</button>
+            </div>
+        </section>
 
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <h2>Search Results</h2>
+            <div id="resultsContainer"></div>
+        </section>
+
+        <section class="info-section">
+            <h2>About</h2>
+            <p>This tool uses the Legiscan API to access legislative data and AI to simplify complex legal language.</p>
+            <div class="api-status" id="apiStatus">
+                <span class="status-indicator" id="statusIndicator">⚠️</span>
+                <span id="statusText">Checking API configuration...</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with Legiscan API • Data organized by Leah Mordehai • Code by @cedar-wara</p>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
